@@ -14,12 +14,13 @@ A telecom company is losing customers. This project answers three questions:
 [IBM Telco Customer Churn dataset](https://github.com/IBM/telco-customer-churn-on-icp4d): 7,043 customers and 21 columns (contract type, tenure, monthly charges, services, and whether they left).
 
 ## Approach
-1. **Data cleaning:** found 11 hidden blank values in TotalCharges (new customers with 0 months of tenure), converted the column to numbers and set the blanks to 0
-2. **Exploratory analysis:** compared churn rates by contract type, tenure, monthly charges, services and payment method
-3. **Prediction model:** logistic regression trained on 80% of customers and tested on the other 20%
-4. **Revenue at risk:** scored every current customer and converted churn risk into annual dollars
-5. **Scenario analysis:** estimated the savings from moving high-risk customers to annual contracts
+This project uses all three levels of analytics:
 
+| Type | Question | What I did |
+|---|---|---|
+| **Descriptive** | What happened? | Cleaned the data (fixed 11 hidden blank TotalCharges values) and compared churn rates by contract, tenure, charges, services and payment method |
+| **Predictive** | What will happen? | Built a logistic regression model (80/20 train-test split) to estimate each customer's probability of leaving |
+| **Prescriptive** | What should we do? | Converted churn risk into annual revenue at risk and modeled a contract-conversion scenario to recommend retention actions |
 ## Key Findings
 - **26.5%** of customers churned
 - Month-to-month customers churn at **42.7%**, compared with **2.8%** for two-year contracts
